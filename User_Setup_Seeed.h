@@ -44,7 +44,7 @@
 #define GC9A01_DRIVER
 
 // FSPI port (SPI2) used unless following defined
-// #define USE_HSPI_PORT      //Uncomment to use HSPI port (Seeed Xiao ESP32s3, etc.)
+#define USE_HSPI_PORT   //Uncomment to use HSPI port (Seeed Xiao ESP32s3, etc.)
 
 // ##################################################################################
 //
@@ -58,7 +58,7 @@
 // driven with a PWM signal or turned OFF/ON then this must be handled by the user
 // sketch. e.g. with digitalWrite(TFT_BL, LOW);
 
-#define TFT_BL   16            // LED back-light control pin
+#define TFT_BL   6            // LED back-light control pin
 #define TFT_BACKLIGHT_ON HIGH  // Level to turn ON back-light (HIGH or LOW)
 
 // The TFT RESET pin can be connected to the NodeMCU RST pin or 3.3V to free up a control pin
@@ -83,12 +83,12 @@
 // For ESP32 Dev board (only tested with ILI9341 display)
 // The hardware SPI can be mapped to any pins
 
-#define TFT_MISO 19
-#define TFT_MOSI 23
-#define TFT_SCLK 18
-#define TFT_CS   5  // Chip select control pin
-#define TFT_DC   17  // Data Command control pin
-#define TFT_RST   4  // Reset pin (could connect to RST pin)
+#define TFT_MISO 2
+#define TFT_MOSI 9
+#define TFT_SCLK 7
+#define TFT_CS   8  // Chip select control pin
+#define TFT_DC   44  // Data Command control pin
+#define TFT_RST   43  // Reset pin (could connect to RST pin)
 //#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is connected to ESP32 board RST
 
 
